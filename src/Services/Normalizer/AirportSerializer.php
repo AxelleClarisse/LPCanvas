@@ -11,7 +11,7 @@ use Symfony\Component\Serializer\Exception\InvalidArgumentException;
 use Symfony\Component\Serializer\Exception\LogicException;
 use Symfony\Component\Serializer\Normalizer\ContextAwareNormalizerInterface;
 
-class airportSerializer implements ContextAwareNormalizerInterface {
+class AirportSerializer implements ContextAwareNormalizerInterface {
 
     /**
      * {@inheritdoc}

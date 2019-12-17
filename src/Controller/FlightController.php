@@ -15,12 +15,12 @@ class FlightController extends AbstractController {
         return $this->json($flights);
     }
 
-    public function getFlight(Flight $id) {
+    public function getFlight(int $id) {
         $flight = $this->getDoctrine()->getRepository(Flight::class)->find($id);
         return $this->json($flight);
     }
 
-    public function deleteFlight(Flight $id) {
+    public function deleteFlight(int $id) {
         $flight = $this->getDoctrine()->getRepository(Flight::class)->find($id);
         $this->getDoctrine()->getManager()->remove($flight);
         $this->getDoctrine()->getManager()->flush();

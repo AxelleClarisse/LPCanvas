@@ -21,12 +21,12 @@ class AirportController extends AbstractController {
         return $this->json($airports);
     }
 
-    public function getAirport(Airport $id) {
+    public function getAirport(int $id) {
         $airport = $this->getDoctrine()->getRepository(Airport::class)->find($id);
         return $this->json($airport);
     }
 
-    public function deleteAirport(Airport $id) {
+    public function deleteAirport(int $id) {
         $airport = $this->getDoctrine()->getRepository(Airport::class)->find($id);
         $this->getDoctrine()->getManager()->remove($airport);
         $this->getDoctrine()->getManager()->flush();

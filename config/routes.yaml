@@ -87,3 +87,7 @@ plane_delete:
   path: /plane
   controller: App\Controller\PlaneController::deletePlane
   methods: ["DELETE"]
+
+planes:
+  resource: './routes/plane.yaml'
+  prefix: /plane
