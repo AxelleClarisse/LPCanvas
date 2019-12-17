@@ -1,3 +1,89 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+hello:
+  path: /hello
+  controller: App\Controller\HelloController::helloAction
+
+number:
+  path: /number/{number}
+  controller: App\Controller\HelloController::numberAction
+  requirements:
+    number: \d+
+
+put:
+  path: /put
+  controller: App\Controller\HelloController::putAction
+  methods: ["PUT", "GET"]
+
+user:
+  path: /user/{lastname}/{firstname}
+  controller: App\Controller\UserController::user
+  requirements:
+    lastname: "^[a-zA-Z]+$"
+    firstname: "[a-zA-Z]+"
+
+list_user:
+  path: /user/list
+  controller: App\Controller\UserController::list
+
+airport_list:
+  path: /airport
+  controller: App\Controller\AirportController::airportList
+  methods: ["GET"]
+
+airport_get:
+  path: /airport/{id}
+  controller: App\Controller\AirportController::getAirport
+  methods: ["GET"]
+
+airport_delete:
+  path: /airport
+  controller: App\Controller\AirportController::deleteAirport
+  methods: ["DELETE"]
+
+flight_list:
+  path: /flight
+  controller: App\Controller\FlightController::flightList
+  methods: ["GET"]
+
+flight_get:
+  path: /flight/{id}
+  controller: App\Controller\FlightController::getFlight
+  methods: ["GET"]
+
+flight_delete:
+  path: /flight
+  controller: App\Controller\FlightController::deleteFlight
+  methods: ["DELETE"]
+
+pilot_list:
+  path: /pilot
+  controller: App\Controller\PilotController::pilotList
+  methods: ["GET"]
+
+pilot_get:
+  path: /pilot/{id}
+  controller: App\Controller\PilotController::getPilot
+  methods: ["GET"]
+
+pilot_delete:
+  path: /pilot
+  controller: App\Controller\PilotController::deletePilot
+  methods: ["DELETE"]
+
+plane_list:
+  path: /plane
+  controller: App\Controller\PlaneController::planeList
+  methods: ["GET"]
+
+plane_get:
+  path: /plane/{id}
+  controller: App\Controller\PlaneController::getPlane
+  methods: ["GET"]
+
+plane_delete:
+  path: /plane
+  controller: App\Controller\PlaneController::deletePlane
+  methods: ["DELETE"]
